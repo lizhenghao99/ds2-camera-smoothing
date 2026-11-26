@@ -11,3 +11,7 @@ This repository contains the source for moderation review, not an installer, dow
 `tools/` contains the browser template and generator source, the BPS generator, and source for the camera and loader changes. The generators consume locally supplied stock game files and local development inputs; those are intentionally not included. Some scripts reference their original development paths. This repository is intended to support review of the submitted code, not reproduce the entire original build workspace.
 
 The submitted HTML reads only the two user-selected files via browser file input, validates their known versions, applies the BPS patches locally, verifies the outputs with SHA-256, and lets the user download the replacements. It does not overwrite inputs or communicate over the network. The separate 1.0.1 loader fix corrects the virtual extent of a section in the locally patched PE so Windows can load it.
+
+## Camera implementation
+
+See [Camera changes in the exact 1.0.1 release](docs/camera-changes.md) for the native code, the final 17 camera-descriptor edits, and verified output hashes.
